@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle Cuenta</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/detalle_cuenta.css">
+    <link rel="icon" type="image/png" href="images/dollar.png">
+    <script src="https://kit.fontawesome.com/d2aae01839.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header bg-primary ds-flex jc-sb pd-y-16 pd-x-24 font-secondary text-white align-center">
+        <div></div>
+    </header>
+    <main class="ds-flex gap-24">
+        <nav class="sidemenu bg-light">
+            <img src="images/wallet-512px.png" alt="wallet">
+            <span class="text-dark font-primary text-center pd-b-16">Chaucherita<br>Web</span>
+            <ul class="menu ls-none">
+                <li>
+                    <button class="menu-button pd-8" onclick="location.href='home.html'">
+                        <i class="fa-solid fa-house text-xl"></i> Regresar
+                    </button>
+                </li>
+            </ul>
+        </nav>
+        <div class="main-content pd-24">
+            <h2 class="font-primary text-dark">Detalle de la Cuenta</h2>
+            <section class="account-details pd-y-16 text-dark font-primary font-base mg-y-16">
+                <p><strong>Nombre:</strong> Cuenta Ahorros</p>
+                <p><strong>Descripción:</strong> No existe</p>
+                <p><strong>Balance Actual:</strong> $10,000</p>
+                <p><strong>Último Movimiento:</strong> 2023-11-23</p>
+            </section>
+            <section class="movements-filter pd-y-16 mg-y-16">
+                <h3 class="font-primary text-dark">Filtrar Movimientos</h3>
+                <form id="filter-form" class="font-primary text-dark ds-flex gap-16">
+                    <div class="form-group">
+                        <label for="etiqueta">Etiqueta:</label>
+                        <select id="etiqueta" name="etiqueta" class="input">
+                            <option value="" selected>Todas</option>
+                            <option value="alimentacion">Alimentación</option>
+                            <option value="transporte">Transporte</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha-inicio">Desde:</label>
+                        <input type="date" id="fecha-inicio" name="fecha-inicio" class="input">
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha-fin">Hasta:</label>
+                        <input type="date" id="fecha-fin" name="fecha-fin" class="input">
+                    </div>
+                    <button type="button" class="button bg-primary text-white" onclick="filtrarMovimientos()">Filtrar</button>
+                </form>
+            </section>
+            <section class="movements-list pd-y-16">
+                <h3 class="font-primary text-dark">Movimientos</h3>
+                <table class="table border-light font-primary text-dark text-base">
+                    <thead>
+                        <tr class="bg-light text-dark">
+                            <th>Valor</th>
+                            <th>Etiqueta</th>
+                            <th>Fecha</th>
+                            <th>Saldo</th>
+                        </tr>
+                    </thead>
+                    <tbody id="movements-tbody">
+                        <tr>
+                            <td class="positive">+$1,000</td>
+                            <td>Trabajo</td>
+                            <td>2023-11-20</td>
+                            <td>$10,000</td>
+                        </tr>
+                        <tr>
+                            <td class="negative">-$500</td>
+                            <td>Alimentación</td>
+                            <td>2023-11-19</td>
+                            <td>$9,500</td>
+                        </tr>
+                        <tr>
+                            <td class="positive">+$200</td>
+                            <td>Trabajo</td>
+                            <td>2023-11-18</td>
+                            <td>$10,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+    <script>
+        function filtrarMovimientos() {
+            const etiqueta = document.getElementById('etiqueta').value;
+            const fechaInicio = document.getElementById('fecha-inicio').value;
+            const fechaFin = document.getElementById('fecha-fin').value;
+
+            console.log('Filtro aplicado:', { etiqueta, fechaInicio, fechaFin });
+        }
+    </script>
+</body>
+</html>

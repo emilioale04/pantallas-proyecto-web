@@ -1,0 +1,203 @@
+.header {
+    height: 60px;
+    text-align: center;
+}
+
+.header a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.sidemenu {
+    width: 200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidemenu li {
+    padding: 8px 0px;
+}
+
+.sidemenu img {
+    width: 75px;
+    padding: 16px 0px;
+    height: auto;
+}
+
+.menu-button {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 16px;
+    background-color: #F3F4F6; 
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #374151; /* Texto oscuro */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.menu-button i {
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+}
+
+.menu-button:hover {
+    background-color: #FFFFFF;
+}
+
+.menu-button:active {
+    transform: scale(0.95); /* Efecto al presionar */
+}
+
+.main-content {
+    flex: 1;
+}
+
+.account-details {
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #F9FAFB;
+}
+
+.movements-filter {
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #FFFFFF;
+}
+
+#filter-form {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    padding-top: 8px;
+}
+
+.form-group label {
+    padding-bottom: 8px;
+}
+
+.input {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #D1D5DB;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    color: #374151;
+    transition: border-color 0.2s;
+}
+
+/* Focus state for inputs */
+.input:focus {
+    outline: none;
+    border-color: #2563EB;
+    box-shadow: 0 0 4px rgba(37, 99, 235, 0.5);
+}
+
+/* Dropdown and date inputs should be the same height */
+select.input,
+input[type="date"].input {
+    height: 38px; /* Match button height */
+}
+
+
+.movements-list {
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #FFFFFF;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    table-layout: fixed; /* Ensures columns have fixed widths */
+}
+
+.table th,
+.table td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #D1D5DB;
+    white-space: nowrap; /* Prevents wrapping of text */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adds ellipsis for overflowing content */
+}
+
+.table th {
+    font-weight: 600;
+    font-size: 16px;
+    color: #374151;
+}
+
+.table td {
+    font-size: 16px;
+}
+
+/* Set specific column widths */
+.table th:nth-child(1),
+.table td:nth-child(1) {
+    width: 15%; /* Adjust percentage as needed for "Valor" */
+}
+
+.table th:nth-child(2),
+.table td:nth-child(2) {
+    width: 30%; /* Adjust percentage as needed for "Etiqueta" */
+}
+
+.table th:nth-child(3),
+.table td:nth-child(3) {
+    width: 25%; /* Adjust percentage as needed for "Fecha" */
+}
+
+.table th:nth-child(4),
+.table td:nth-child(4) {
+    width: 30%; /* Adjust percentage as needed for "Saldo" */
+}
+
+.positive {
+    color: #10B981; /* Green for positive values */
+}
+
+.negative {
+    color: #EF4444; /* Red for negative values */
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #1E3A8A;
+    border: 1px solid #1E3A8A;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #2563EB;
+    outline: none;
+    border: 1px solid #2563EB;
+}
+
+.button:active {
+    transform: scale(0.95);
+}

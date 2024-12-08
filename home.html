@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="icon" type="image/png" href="images/dollar.png">
+    <script src="https://kit.fontawesome.com/d2aae01839.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header bg-primary ds-flex jc-sb pd-y-16 pd-x-24 font-secondary text-white align-center">
+        <div></div>
+        <div onclick="location.href='login.html'" style="cursor: pointer;">
+            <span class="pd-r-8 font-bold font-primary">Cerrar Sesión</span>
+            <i class="fa-solid fa-right-from-bracket text-white text-xl"></i>
+        </div>
+    </header>    
+    <main class="ds-flex jc-sb gap-24">
+        <nav class="sidemenu bg-light">
+            <img src="images/wallet-512px.png" alt="wallet">
+            <span class="text-dark font-primary text-center pd-b-16">Chaucherita<br>Web</span>
+            <ul class="menu ls-none">
+                <li>
+                    <button class="menu-button pd-8" onclick="location.href='home.html'">
+                        <i class="fa-solid fa-house text-xl"></i> Inicio
+                    </button>
+                </li>
+                <li>
+                    <button class="menu-button pd-8" onclick="location.href='crear_cuenta.html'">
+                        <i class="fa-solid fa-plus text-xl"></i> Crear Cuenta
+                    </button>
+                </li>
+                <li>
+                    <button class="menu-button pd-8" onclick="location.href='ingreso.html'">
+                        <i class="fa-solid fa-arrow-trend-up text-xl"></i> Ingreso
+                    </button>
+                </li>
+                <li>
+                    <button class="menu-button pd-8" onclick="location.href='egreso.html'">
+                        <i class="fa-solid fa-arrow-trend-down text-xl"></i> Egreso
+                    </button>
+                </li>
+                <li>
+                    <button class="menu-button pd-8" onclick="location.href='transferencia.html'">
+                        <i class="fa-solid fa-arrow-right-arrow-left text-xl"></i> Transferencia
+                    </button>
+                </li>
+            </ul>
+        </nav>        
+        <!-- Sección principal -->
+        <div class="main-content">
+            <section class="font-primary pd-24">
+                <h2 class="font-primary text-dark">Mis Cuentas</h2>
+                <div>
+                    <table class="table border-light mg-y-16">
+                        <thead>
+                            <tr class="bg-light text-dark">
+                                <th class="pd-8">Nombre de la Cuenta</th>
+                                <th class="pd-8">Balance Actual</th>
+                                <th class="pd-8">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="pd-8">Cuenta Ahorros</td>
+                                <td class="pd-8">$10,000</td>
+                                <td class="pd-8">
+                                    <a href="detalle_cuenta.html" class="button bg-secondary text-white">Ver Detalle</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="pd-8">Cuenta Corriente</td>
+                                <td class="pd-8">$5,500</td>
+                                <td class="pd-8">
+                                    <a href="detalle_cuenta.html" class="button bg-secondary text-white">Ver Detalle</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+        <div class="pd-24 text-dark">
+            <aside class="recent-transactions bg-light border-dark pd-16" style="width: 300px;">
+                <h3 class="font-primary">Movimientos Recientes</h3>
+                <ul class="transaction-list ls-none">
+                <li class="transaction-item pd-y-8 border-b-light">
+                    <p class="font-primary">Tipo: <strong>Ingreso</strong></p>
+                    <p class="font-primary">Cuenta: <strong>Cuenta Ahorros</strong></p>
+                    <p class="font-primary">Valor: <strong>$1,000</strong></p>
+                </li>
+                <li class="transaction-item pd-y-8 border-b-light">
+                    <p class="font-primary">Tipo: <strong>Egreso</strong></p>
+                    <p class="font-primary">Cuenta: <strong>Cuenta Corriente</strong></p>
+                    <p class="font-primary">Valor: <strong>$500</strong></p>
+                </li>
+                <li class="transaction-item pd-y-8 border-b-light">
+                    <p class="font-primary">Tipo: <strong>Transferencia</strong></p>
+                    <p class="font-primary">De: <strong>Cuenta Ahorros</strong></p>
+                    <p class="font-primary">A: <strong>Cuenta Corriente</strong></p>
+                    <p class="font-primary">Valor: <strong>$2,000</strong></p>
+                </li>
+            </ul>
+            </aside>
+        </div>
+    </main>
+</body>
+</html>

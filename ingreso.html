@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/movimiento.css">
+    <script src="https://kit.fontawesome.com/d2aae01839.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header bg-primary ds-flex jc-sb pd-y-16 pd-x-24 font-secondary text-white align-center">
+        <div></div>
+    </header>    
+    <main class="ds-flex gap-24">
+        <nav class="sidemenu bg-light">
+            <img src="images/wallet-512px.png" alt="wallet">
+            <span class="text-dark font-primary text-center pd-b-16">Chaucherita<br>Web</span>
+            <ul class="menu ls-none">
+                <li>
+                    <button class="menu-button pd-8" onclick="location.href='home.html'">
+                        <i class="fa-solid fa-house text-xl"></i> Regresar
+                    </button>
+                </li>
+            </ul>
+        </nav>        
+        <div class="main-content pd-24">
+            <h2 class="font-primary text-dark">Registrar Ingreso</h2>
+            <form id="ingreso-form" class="font-primary" action="home.html" method="get">
+                <div class="form-group pd-y-16">
+                    <label for="valor">Valor:</label>
+                    <input type="number" id="valor" name="valor" class="input text-base" placeholder="Ingrese el valor" required>
+                </div>
+                <div class="form-group pd-y-16">
+                    <label for="descripcion">Descripción (Opcional):</label>
+                    <input id="descripcion" name="descripcion" class="input text-base" placeholder="Descripción del ingreso">
+                </div>
+                <div class="form-group pd-y-16">
+                    <label for="cuenta">Cuenta Destino:</label>
+                    <select id="cuenta" name="cuenta" class="input text-base" required>
+                        <option value="" disabled selected>Seleccione una cuenta</option>
+                        <option value="ahorros">Cuenta de Ahorros</option>
+                        <option value="corriente">Cuenta Corriente</option>
+                    </select>
+                </div>
+                <div class="form-group pd-y-16">
+                    <label for="etiqueta">Etiqueta:</label>
+                    <select id="etiqueta" name="etiqueta" class="input text-base" onchange="mostrarFormularioEtiqueta()" required>
+                        <option value="" disabled selected>Seleccione una etiqueta</option>
+                        <option value="agregar">Agregar Etiqueta</option>
+                        <option value="alimentacion">Alimentación</option>
+                        <option value="transporte">Transporte</option>
+                    </select>
+                </div>
+                <div id="formulario-agregar-etiqueta" class="hidden">
+                    <h3 class="font-primary text-dark">Agregar Nueva Etiqueta</h3>
+                    <div class="form-group pd-y-16">
+                        <label for="nueva-etiqueta">Nombre de la Etiqueta:</label>
+                        <input type="text" id="nueva-etiqueta" name="nueva-etiqueta" class="input text-base" placeholder="Ingrese el nombre de la etiqueta">
+                    </div>
+                    <button type="button" class="button bg-primary text-white" onclick="agregarEtiqueta()">Agregar Etiqueta</button>
+                </div>
+                <div class="pd-y-16" id="boton-registrar-container">
+                    <button type="submit" class="button bg-primary text-white">Registrar Ingreso</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="js/etiqueta.js">
+    </script>
+</body>
+</html>
