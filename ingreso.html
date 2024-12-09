@@ -43,14 +43,12 @@
                         <option value="corriente">Cuenta Corriente</option>
                     </select>
                 </div>
-                <div class="form-group pd-y-16">
+                <div class="form-group pd-y-16 ds-flex align-center gap-8">
                     <label for="etiqueta">Etiqueta:</label>
-                    <select id="etiqueta" name="etiqueta" class="input text-base" onchange="mostrarFormularioEtiqueta()" required>
+                    <select id="etiqueta" name="etiqueta" class="input text-base" required>
                         <option value="" disabled selected>Seleccione una etiqueta</option>
-                        <option value="agregar">Agregar Etiqueta</option>
-                        <option value="alimentacion">Alimentación</option>
-                        <option value="transporte">Transporte</option>
                     </select>
+                    <button type="button" class="button bg-primary text-white" onclick="abrirCategorias()">Gestionar Etiquetas</button>
                 </div>
                 <div id="formulario-agregar-etiqueta" class="hidden">
                     <h3 class="font-primary text-dark">Agregar Nueva Etiqueta</h3>
@@ -58,7 +56,7 @@
                         <label for="nueva-etiqueta">Nombre de la Etiqueta:</label>
                         <input type="text" id="nueva-etiqueta" name="nueva-etiqueta" class="input text-base" placeholder="Ingrese el nombre de la etiqueta">
                     </div>
-                    <button type="button" class="button bg-primary text-white" onclick="agregarEtiqueta()">Agregar Etiqueta</button>
+                    <button type="button" class="button bg-primary text-white" onclick="agregarCategoria()">Agregar Etiqueta</button>
                 </div>
                 <div class="pd-y-16" id="boton-registrar-container">
                     <button type="submit" class="button bg-primary text-white">Registrar Ingreso</button>
@@ -66,7 +64,33 @@
             </form>
         </div>
     </main>
-    <script src="js/etiqueta.js">
+    <script src="js/categorias.js"></script>
+    <script>
+        function abrirCategorias() {
+            window.location.href = 'categorias.html';
+        }
+
+        window.onload = function() {
+            cargarEtiquetas();
+            var selectedCategory = localStorage.getItem('selectedCategory');
+            if (selectedCategory) {
+                document.getElementById('etiqueta').value = selectedCategory;
+                localStorage.removeItem('selectedCategory');
+            }
+        };
+
+        function cargarEtiquetas() {
+            var etiquetas = JSON.parse(localStorage.getItem('categorias')) || [];
+            var etiquetaSelect = document.getElementById('etiqueta');
+            etiquetaSelect.innerHTML = '<option value="" disabled selected>Seleccione una etiqueta</option>';
+
+            etiquetas.forEach(function(etiqueta) {
+                var option = document.createElement('option');
+                option.value = etiqueta.nombre;
+                option.textContent = etiqueta.nombre;
+                etiquetaSelect.appendChild(option);
+            });
+        }
     </script>
 </body>
 </html>

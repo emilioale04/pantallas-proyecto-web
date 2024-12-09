@@ -158,3 +158,38 @@
 .text-center { text-align: center; }
 .text-left { text-align: left; }
 .text-right { text-align: right; }
+
+/* Table Styles */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    border: 1px solid #D1D5DB;
+    padding: 8px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #F3F4F6;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.ds-flex {
+    flex-direction: row;
+    align-items: center;
+}
+
+.form-group.ds-flex label {
+    margin-right: 8px;
+}
+
+.form-group.ds-flex .button {
+    margin-right: 8px;
+}
