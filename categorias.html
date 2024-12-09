@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/movimiento.css">
+    <link rel="icon" type="image/png" href="images/dollar.png">
+    <script src="https://kit.fontawesome.com/d2aae01839.js" crossorigin="anonymous"></script>
+</head>
+<body class="font-primary">
+    <header class="header bg-primary ds-flex jc-sb pd-y-16 pd-x-24 font-secondary text-white align-center">
+        <div></div>
+    </header>    
+    <main class="ds-flex gap-24">
+        <nav class="sidemenu bg-light">
+            <img src="images/wallet-512px.png" alt="wallet">
+            <span class="text-dark font-primary text-center pd-b-16">Chaucherita<br>Web</span>
+            <ul class="menu ls-none">
+                <li>
+                    <button class="menu-button pd-8" onclick="window.history.back()">
+                        <i class="fa-solid fa-house text-xl"></i> Regresar
+                    </button>
+                </li>
+            </ul>
+        </nav>        
+        <div class="main-content pd-24">
+            <h2 class="font-primary text-dark">Etiquetas</h2>
+            <button type="button" class="button bg-primary text-white" onclick="agregarCategoria()">Agregar Nueva Etiqueta</button>
+            <table class="table border-light mg-y-16">
+                <thead>
+                    <tr class="bg-light text-dark">
+                        <th class="pd-8">Nombre de la Etiqueta</th>
+                        <th class="pd-8">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-categorias">
+                    <!-- Lista de etiquetas -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="js/categorias.js"></script>
+</body>
+</html>
