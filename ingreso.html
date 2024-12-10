@@ -70,6 +70,7 @@
         </div>
     </main>
     <script src="js/categorias.js"></script>
+    <script src="js/cuentas.js"></script>
     <script>
         function abrirCategorias() {
             window.location.href = 'categorias.html';
@@ -77,6 +78,7 @@
 
         window.onload = function() {
             cargarEtiquetas();
+            cargarCuentas();
             var selectedCategory = localStorage.getItem('selectedCategory');
             if (selectedCategory) {
                 document.getElementById('etiqueta').value = selectedCategory;
@@ -94,6 +96,19 @@
                 option.value = etiqueta.nombre;
                 option.textContent = etiqueta.nombre;
                 etiquetaSelect.appendChild(option);
+            });
+        }
+
+        function cargarCuentas() {
+            var cuentas = JSON.parse(localStorage.getItem('cuentas')) || [];
+            var cuentaSelect = document.getElementById('cuenta');
+            cuentaSelect.innerHTML = '<option value="" disabled selected>Seleccione una cuenta</option>';
+
+            cuentas.forEach(function(cuenta) {
+                var option = document.createElement('option');
+                option.value = cuenta.nombre;
+                option.textContent = cuenta.nombre;
+                cuentaSelect.appendChild(option);
             });
         }
     </script>
