@@ -166,6 +166,7 @@
 .table {
     width: 100%;
     border-collapse: collapse;
+    background-color: var(--color-white);
 }
 
 .table th,
@@ -290,6 +291,15 @@
     flex: 1;
     max-width: 800px;
     padding: var(--spacing-lg) var(--spacing-lg);
+}
+
+.main {
+    display: flex; 
+    flex-direction: row;
+}
+.content {
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
