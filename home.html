@@ -1,10 +1,9 @@
-<html lang="en">
+<!DOCTYPE html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/home.css">
     <link rel="icon" type="image/png" href="images/dollar.png">
     <script src="https://kit.fontawesome.com/d2aae01839.js" crossorigin="anonymous"></script>
 </head>
@@ -16,33 +15,33 @@
             <i class="fa-solid fa-right-from-bracket text-white text-xl"></i>
         </div>
     </header>    
-    <main class="ds-flex jc-sb gap-24">
+    <main class="ds-flex gap-lg">
         <nav class="sidemenu bg-light">
             <img src="images/wallet-512px.png" alt="wallet">
             <span class="text-dark font-primary text-center pd-b-16">Chaucherita<br>Web</span>
             <ul class="menu ls-none">
                 <li>
-                    <button class="menu-button pd-8" onclick="location.href='home.html'">
+                    <button class="menu-button" onclick="location.href='home.html'">
                         <i class="fa-solid fa-house text-xl"></i> Inicio
                     </button>
                 </li>
                 <li>
-                    <button class="menu-button pd-8" onclick="location.href='crear_cuenta.html'">
-                        <i class="fa-solid fa-plus text-xl"></i> Crear Cuenta
+                    <button class="menu-button" onclick="location.href='gestionar_cuenta.html'">
+                        <i class="fa-solid fa-user text-xl"></i> Gestionar Cuenta
                     </button>
                 </li>
                 <li>
-                    <button class="menu-button pd-8" onclick="location.href='ingreso.html'">
+                    <button class="menu-button" onclick="location.href='ingreso.html'">
                         <i class="fa-solid fa-arrow-trend-up text-xl"></i> Ingreso
                     </button>
                 </li>
                 <li>
-                    <button class="menu-button pd-8" onclick="location.href='egreso.html'">
+                    <button class="menu-button" onclick="location.href='egreso.html'">
                         <i class="fa-solid fa-arrow-trend-down text-xl"></i> Egreso
                     </button>
                 </li>
                 <li>
-                    <button class="menu-button pd-8" onclick="location.href='transferencia.html'">
+                    <button class="menu-button" onclick="location.href='transferencia.html'">
                         <i class="fa-solid fa-arrow-right-arrow-left text-xl"></i> Transferencia
                     </button>
                 </li>
@@ -82,7 +81,7 @@
             </section>
         </div>
         <div class="pd-24 text-dark">
-            <aside class="recent-transactions bg-light border-dark pd-16" style="width: 300px;">
+            <aside class="recent-transactions bg-light border-dark p-lg mt-xl" style="width: 300px;">
                 <h3 class="font-primary">Movimientos Recientes</h3>
                 <ul class="transaction-list ls-none">
                 <li class="transaction-item pd-y-8 border-b-light">
