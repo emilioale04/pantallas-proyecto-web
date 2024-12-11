@@ -3,6 +3,17 @@
     text-align: center;
 }
 
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
 .header a {
     text-decoration: none;
     color: #FFFFFF;
